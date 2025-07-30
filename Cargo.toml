@@ -1,0 +1,32 @@
+[package]
+name = "async-editor"
+authors = ["rustkin"]
+categories = ["text-editors"]
+description = "Async Console Editor with Resizeable Print Window, perfect for AI Chat Apps"
+documentation = "https://docs.rs/async-editor"
+include = ["Cargo.toml", "src/**/*.rs", "README.md", "LICENSE"]
+keywords = ["async", "console", "editor"]
+license = "MIT"
+readme = "README.md"
+repository = "https://github.com/rustkins/async-editor"
+version = "0.1.3"
+edition = "2024"
+
+
+[dependencies]
+crossterm = { version = "0.29", features = ["event-stream"] }
+derive_more = {version = "1.0.0-beta", features=["from"]}
+futures-util = { version = "0.3", features = ["io"] }
+pin-project = "1.1"
+thingbuf = "0.1"
+thiserror = "2.0.12"
+unicode-segmentation = "1.12"
+unicode-width = "0.2.0"
+historybuffer = "0.1.1"
+grapheme-utils = "0.1.0"
+
+[dev-dependencies]
+tokio = { version = "1", features = ["full"] }
+
+[lib]
+doctest = false
